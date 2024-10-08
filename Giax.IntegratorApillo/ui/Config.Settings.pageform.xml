@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+          xmlns="http://www.enova.pl/schema/form.xsd"
+          xsi:schemaLocation="http://www.enova.pl/schema/ http://www.enova.pl/schema/form.xsd"
+		  RightName="Page:IntegratorApilloConfigPage"
+          Priority="10634" >
+  <Page Name="IntegratorApilloConfigPage" CaptionHtml="Giax/IntegratorApillo" DataContext="{new SettingsConfig}">
+	  <Group CaptionHtml="Tworzenie i usuwanie cech" >
+		  <Row>
+			  <Command CaptionHtml="Utwórz  cechy" MethodName="CreateFeatures" Width="17"  />
+			 
+		  </Row>
+	  </Group>
+
+	  <Group CaptionHtml="Status uwierzytelnienia">
+		  <Label  CaptionHtml="Zalogowano" />
+		  <Command CaptionHtml="Odśwież nowy token" Visibility="{IsAuthenticated}" MethodName="GetRefreshedToken" Width="17"  />
+		  <Label Visibility="{!IsAuthenticated}" CaptionHtml="Nie zalogowano" />
+		  <Command CaptionHtml="Utworz nowy token" Visibility="{!IsAuthenticated}" MethodName="GetAccesToken" Width="17"  />
+	  </Group>
+	  
+	  <Group CaptionHtml="Konfiguracja" Visibility="{isVisible}">
+		  <Field CaptionHtml="Access Token" EditValue="{AccessToken}" LabelWidth="25" Width="60" IsReadOnly="false"/>
+		  <Field CaptionHtml="Refresh Token" EditValue="{RefreshToken}" LabelWidth="25" Width="60" IsReadOnly="false"/>
+		  <Field CaptionHtml="Client Token" EditValue="{ClientToken}" LabelWidth="25" Width="60" IsReadOnly="false"/>
+		  <Field CaptionHtml="Kod autoryzacji" EditValue="{AuthorizationCode}" LabelWidth="25" Width="60" IsReadOnly="false"/>
+		  <Field CaptionHtml="Client ID" EditValue="{ClientId}" LabelWidth="25" Width="60" IsReadOnly="false"/>
+		  <Field CaptionHtml="Api endpoint" EditValue="{ApiEndpoint}" LabelWidth="25" Width="60" IsReadOnly="false"/>
+		  <Field CaptionHtml="Timestamp" EditValue="{Timestamp  }" LabelWidth="25" Width="60" IsReadOnly="false"/>
+		  
+	  </Group>
+
+	
+
+
+  </Page>
+</DataForm>

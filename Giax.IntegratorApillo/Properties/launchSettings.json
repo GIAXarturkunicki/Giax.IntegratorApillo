@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Giax.IntegratorApillo": {
+      "commandName": "Project",
+      "commandLineArgs": "--dbconfig=\"C:\\enovaDodatki\\Demo\\Lista baz danych.xml\""
+    }
+  }
+}
