@@ -13,7 +13,7 @@
 		  </Row>
 	  </Group>
 
-	  <Group CaptionHtml="Status uwierzytelnienia">
+	  <Group CaptionHtml="Status uwierzytelnienia ">
 		  <Label  CaptionHtml="Zalogowano" />
 		  <Command CaptionHtml="Odśwież nowy token" Visibility="{IsAuthenticated}" MethodName="GetRefreshedToken" Width="17"  />
 		  <Label Visibility="{!IsAuthenticated}" CaptionHtml="Nie zalogowano" />

@@ -1,0 +1,434 @@
+{
+	"info": {
+		"_postman_id": "ba556c0e-9cf6-4cdc-883b-0537a539ffea",
+		"name": "Integrator Apilo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34527621",
+		"_collection_link": "https://giaxit.postman.co/workspace/GIAX-Workspace~9e0c8f32-8dcd-4c55-8b93-3bdaec4eb08c/collection/34527621-ba556c0e-9cf6-4cdc-883b-0537a539ffea?action=share&source=collection_link&creator=34527621"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Get Access Code",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "53d1fced-deb0-58f7-a5e5-941c58a90997",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"grantType\": \"authorization_code\",\r\n  \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjMxNjM5OTcsImlzcyI6ImdlcmxhY2guYXBpbG8uY29tIiwiZXhwIjoxNzI0OTc4Mzk3LCJqdGkiOiI1NWZlZGJkNi0wMmQ4LTVkMDYtOTg0NC1hNzIxZjU1M2UwOWIiLCJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiY2xpZW50X2lkIjozLCJwbGF0Zm9ybV9pZCI6Mn0.jSjsrAPPJPvHifL98hl3ywd4DdOABdwiYPsq7v5TLaAczFjPWj5da1VwFOhPeO_Xdz3ywf232vA3EJ-mRYQC0VcExGupR1ToFSvuyJqV9JPX5bsa-woUvoatoice5BmbbhGfnIQ6Cq11fhkRTnQEvAHA2zEsIUW22W5N7JT9c17hIz7SDvS80IU3-UupbGEkgpyGglDzmgy4tXrLpnhidKD7Szuo_YUQDlG2Gvk1h_R8Dh8h8lZhZo92tOCnUZtyjj72xbq39c6bsI4Uo1F4ZhIKzYoErE712qAdriHHr8wnA-hKd3HWMkPp7wpDi8KhlVGTXf7Tuc5xe_HAZO1PxppoMobaN3xCTcwtT1QBEse7a_8Ta-ZuJQrhhqh3ZYoM28cPEKt4dsDg0rsjAhMGa2MkCjjHb9b82pxwrY6ESKkRd_jyFAzvgi34uMSGMJFvXVkIWiP9Y-lug27PzbeCp78OtQaDTUITxLEzbbSV5-h7ZfEIvVCXohSjSe16FQuxxoWRjYCu4BAznP0yjkCQeHkw-dEQTeqNzsZ1zPXFOzSvmja6xuoTqVykAnXgFHTuU2yWZWn71cavRBuWpYY-p5YSeFswdLOj6p7c58qRsemDXymhfa883JcH8jtebrcqjOrPN6s7nmxD9XzlQ6H6zBoi-Q3l17z9pOj1OjErNGc\",\r\n  \"developerId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gerlach.apilo.com/rest/auth/token/",
+							"protocol": "https",
+							"host": [
+								"gerlach",
+								"apilo",
+								"com"
+							],
+							"path": [
+								"rest",
+								"auth",
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Access Code",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "6c257465-6679-52e7-950f-321c1eed8781",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"grantType\": \"refresh_token\",\r\n  \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjE3MTQ0MTAsImlzcyI6ImdlcmxhY2guYXBpbG8uY29tIiwiZXhwIjoxNzI3MDcxMjEwLCJqdGkiOiI3ZmU5YWMyMy01MmMyLTUxMWEtOGJmMC05OGU1MDgwMTc4YzgiLCJ0eXBlIjoicmVmcmVzaF90b2tlbiIsImNsaWVudF9pZCI6MywicGxhdGZvcm1faWQiOjJ9.ZFRiFsZzn45oFTSANdgNxk5gnCtSpHkGlt2Q9jkNJKlwxu6J1JSKp-ehakoHQsm6Ag5Wu0nVUXYIj-v_Say8G7ByR6gQsRaG4YrJSpMVx-S2Cf63QFQs0PuSio0kA5f-OPa0wXjkLobWTGG5swP6YltSYH3ZuQ808T0xqhUwZniPB5_Dtfz9VvUIboBZcIpQWfLwaKq1vTTE0afhu8nslZMaCkBS9-NjWuHVqiP42XnNQ3rn4oef4iJTK6BM-RKeI5LhL3Yt0a8g9Uc3yQSelN0iis7odeggm9eeHSWY5T6cthLE_RfjTRdrj_QvPoaCDz4awn7lsh6sxYWh46dmQifSWfCiM9k6pucWAqtffGzXJXxKs3ppjeXPYxZsNa3wFejO8g4u1PtRP8u1UM101D-GBY6pdmrZWdD-Ivs-LiU0esZ-MP3ohzKlbVw6CjUWV8OMINDaQ_09FG0xPbaUuSAlsZAU86GP7KDUMsy-eRH7z0NjcNSI-CcEfxibdiv1bMEAgQ9nqU8hUiWMr8Aq9T75n1pbGmU4jyotOXkjkUV9G68qX5dj_5VDo-SEjdvbzB3rgw9ACD7j8MY69T4a8hk6zbQc-SJdbRf5lG5Pv29Uoe-dDORYLZ9q2EH0vcQaTgGoR0_lfc_ZujPAURN5jAniw2zfse_MYEaI_zc--0s\",\r\n  \"developerId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gerlach.apilo.com/rest/auth/token/",
+							"protocol": "https",
+							"host": [
+								"gerlach",
+								"apilo",
+								"com"
+							],
+							"path": [
+								"rest",
+								"auth",
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Auth",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://gerlach.apilo.com/rest/api/",
+							"protocol": "https",
+							"host": [
+								"gerlach",
+								"apilo",
+								"com"
+							],
+							"path": [
+								"rest",
+								"api",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Orders list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gerlach.apilo.com/rest/api/orders/",
+							"protocol": "https",
+							"host": [
+								"gerlach",
+								"apilo",
+								"com"
+							],
+							"path": [
+								"rest",
+								"api",
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of order shipments",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessTokenUrl",
+									"value": "https://gerlach.apilo.com/rest/auth/token/",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://gerlach.apilo.com/rest/auth/token/",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "800ff5f9-5a50-5c27-a0a7-df051939dada",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "3",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://gerlach.apilo.com/rest/api/orders/AL240703523/shipment/",
+							"protocol": "https",
+							"host": [
+								"gerlach",
+								"apilo",
+								"com"
+							],
+							"path": [
+								"rest",
+								"api",
+								"orders",
+								"AL240703523",
+								"shipment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shipment detail",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessTokenUrl",
+									"value": "https://gerlach.apilo.com/rest/auth/token/",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://gerlach.apilo.com/rest/auth/token/",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "800ff5f9-5a50-5c27-a0a7-df051939dada",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "3",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://gerlach.apilo.com/rest/api/orders/AL240703523/shipment/65237/",
+							"protocol": "https",
+							"host": [
+								"gerlach",
+								"apilo",
+								"com"
+							],
+							"path": [
+								"rest",
+								"api",
+								"orders",
+								"AL240703523",
+								"shipment",
+								"65237",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Binary document",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessTokenUrl",
+									"value": "https://gerlach.apilo.com/rest/auth/token/",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://gerlach.apilo.com/rest/auth/token/",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "800ff5f9-5a50-5c27-a0a7-df051939dada",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "3",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://gerlach.apilo.com/rest/api/orders/AL240703523/media/65237/",
+							"protocol": "https",
+							"host": [
+								"gerlach",
+								"apilo",
+								"com"
+							],
+							"path": [
+								"rest",
+								"api",
+								"orders",
+								"AL240703523",
+								"media",
+								"65237",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
